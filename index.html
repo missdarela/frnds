@@ -1,0 +1,1706 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO -->
+    <title>FRNDS Dubai | Fine Dining &amp; Shared Experiences</title>
+    <meta
+      name="description"
+      content="Experience FRNDS Dubai — fine dining, art, music and shared experiences."
+    />
+    <!-- TODO: replace with production URL -->
+    <link rel="canonical" href="https://www.frndsdubai.com/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="FRNDS Dubai" />
+    <meta property="og:title" content="FRNDS Dubai | Fine Dining &amp; Shared Experiences" />
+    <meta
+      property="og:description"
+      content="Experience FRNDS Dubai — fine dining, art, music and shared experiences."
+    />
+    <meta property="og:url" content="https://www.frndsdubai.com/" />
+    <meta property="og:locale" content="en_AE" />
+    <!-- TODO: add real OG image at /images/og/og-image.jpg (1200x630) -->
+    <meta property="og:image" content="https://www.frndsdubai.com/images/og/og-image.jpg" />
+
+    <!-- Twitter / X card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="FRNDS Dubai | Fine Dining &amp; Shared Experiences" />
+    <meta
+      name="twitter:description"
+      content="Experience FRNDS Dubai — fine dining, art, music and shared experiences."
+    />
+    <meta name="twitter:image" content="https://www.frndsdubai.com/images/og/og-image.jpg" />
+
+    <!-- Fonts: Cormorant Garamond (editorial), Italianno (decorative script),
+         Inter (functional UI). Swap families here to rebrand. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700&family=Italianno&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon placeholder — add real assets to /public -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+
+  <body class="bg-frnds-black text-frnds-cream font-sans antialiased">
+    <!-- Skip link for keyboard users -->
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:bg-frnds-gold focus:text-frnds-black focus:px-4 focus:py-2"
+    >
+      Skip to content
+    </a>
+
+    <!-- ============================================================
+         HEADER — announcement bar + primary navigation.
+         Fixed so the navbar overlays the hero video; solidifies on scroll.
+         ============================================================ -->
+    <header id="site-header" data-header class="fixed inset-x-0 top-0 z-50">
+      <!-- Announcement bar -->
+      <div data-announcement class="announcement-bar" role="region" aria-label="Announcement">
+        <div class="container-content relative flex items-center justify-center py-2.5">
+          <a
+            href="#experiences"
+            class="group inline-flex max-w-full items-baseline justify-center gap-x-2 text-center"
+          >
+            <span class="truncate font-script text-xl leading-none text-frnds-gold sm:text-2xl"
+              >Gastronomic Saturday Dinners</span
+            >
+            <span class="type-announcement shrink-0 uppercase text-frnds-cream/80"
+              >at FRNDS</span
+            >
+            <span
+              aria-hidden="true"
+              class="shrink-0 text-sm text-frnds-gold transition-transform duration-300 group-hover:translate-x-1"
+              >&rarr;</span
+            >
+          </a>
+          <button
+            type="button"
+            data-announcement-close
+            aria-label="Dismiss announcement"
+            class="absolute right-2 top-1/2 grid h-9 w-9 -translate-y-1/2 place-items-center text-frnds-cream/60 transition-colors duration-300 hover:text-frnds-cream sm:right-4"
+          >
+            <svg
+              aria-hidden="true"
+              class="h-3.5 w-3.5"
+              viewBox="0 0 14 14"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.25"
+            >
+              <path d="M1 1l12 12M13 1L1 13" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Primary navbar -->
+      <nav aria-label="Primary" class="site-nav">
+        <div class="container-content flex h-20 items-center justify-between lg:h-24">
+          <!-- Logo -->
+          <a href="/" class="relative z-10 shrink-0" aria-label="FRNDS Dubai — home">
+            <img
+              src="/images/hero/frnds-logo.avif"
+              alt="FRNDS Dubai"
+              class="h-9 w-auto sm:h-10 lg:h-11"
+              width="160"
+              height="40"
+            />
+          </a>
+
+          <!-- Desktop nav links -->
+          <ul class="type-nav hidden items-center gap-9 lg:flex xl:gap-12">
+            <li><a href="#dining" class="nav-link">Dining</a></li>
+            <li><a href="#experiences" class="nav-link">Experiences</a></li>
+            <li><a href="#events" class="nav-link">Events</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+
+          <!-- Reserve CTA (desktop) -->
+          <a href="#reserve" class="btn-reserve hidden lg:inline-flex">Reserve</a>
+
+          <!-- Hamburger (mobile) -->
+          <button
+            type="button"
+            data-nav-toggle
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="Open navigation menu"
+            class="nav-toggle relative z-10 flex h-11 w-11 flex-col items-center justify-center gap-[7px] lg:hidden"
+          >
+            <span class="nav-toggle-line" aria-hidden="true"></span>
+            <span class="nav-toggle-line" aria-hidden="true"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ============================================================
+         MOBILE MENU — full-screen burgundy overlay
+         ============================================================ -->
+    <div
+      id="mobile-menu"
+      data-nav-menu
+      class="mobile-menu"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Navigation menu"
+    >
+      <nav
+        aria-label="Mobile"
+        class="container-content flex flex-1 flex-col justify-center pb-16 pt-32"
+      >
+        <ul class="flex flex-col gap-2">
+          <li class="mobile-nav-link">
+            <a
+              href="#dining"
+              class="block py-3 font-display text-4xl font-medium text-frnds-cream transition-colors duration-300 hover:text-frnds-gold sm:text-5xl"
+              >Dining</a
+            >
+          </li>
+          <li class="mobile-nav-link">
+            <a
+              href="#experiences"
+              class="block py-3 font-display text-4xl font-medium text-frnds-cream transition-colors duration-300 hover:text-frnds-gold sm:text-5xl"
+              >Experiences</a
+            >
+          </li>
+          <li class="mobile-nav-link">
+            <a
+              href="#events"
+              class="block py-3 font-display text-4xl font-medium text-frnds-cream transition-colors duration-300 hover:text-frnds-gold sm:text-5xl"
+              >Events</a
+            >
+          </li>
+          <li class="mobile-nav-link">
+            <a
+              href="#about"
+              class="block py-3 font-display text-4xl font-medium text-frnds-cream transition-colors duration-300 hover:text-frnds-gold sm:text-5xl"
+              >About</a
+            >
+          </li>
+          <li class="mobile-nav-link">
+            <a
+              href="#contact"
+              class="block py-3 font-display text-4xl font-medium text-frnds-cream transition-colors duration-300 hover:text-frnds-gold sm:text-5xl"
+              >Contact</a
+            >
+          </li>
+        </ul>
+
+        <div class="mt-12">
+          <a href="#reserve" class="btn-primary w-full sm:w-auto">
+            Reserve a Table
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+
+    <!-- ============================================================
+         MAIN — Phase 1: full-screen hero only
+         ============================================================ -->
+    <main id="main">
+      <section
+        class="relative flex min-h-[max(540px,100svh)] flex-col overflow-hidden"
+        aria-labelledby="hero-heading"
+      >
+        <!-- Background video — decorative; all meaning lives in the HTML overlay -->
+        <video
+          class="absolute inset-0 h-full w-full object-cover object-center"
+          autoplay
+          muted
+          loop
+          playsinline
+          aria-hidden="true"
+          tabindex="-1"
+          preload="auto"
+        >
+          <source src="/videos/frnds-hero.mp4" type="video/mp4" />
+        </video>
+
+        <!-- Directional overlay: darker left, lighter right + bottom fade -->
+        <div
+          aria-hidden="true"
+          class="absolute inset-0 bg-gradient-to-r from-frnds-black/85 via-frnds-burgundy/40 to-frnds-black/25 lg:via-frnds-burgundy/30 lg:to-transparent"
+        ></div>
+        <div
+          aria-hidden="true"
+          class="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-frnds-black/80 to-transparent"
+        ></div>
+
+        <!-- Hero content — lower-left. Top padding guarantees clearance
+             below the fixed header in both announcement states. -->
+        <div
+          class="container-content relative z-10 flex flex-1 flex-col justify-end pb-24 pt-36 sm:pb-28 lg:pb-32 lg:pt-44"
+        >
+          <div class="max-w-2xl">
+            <!-- Eyebrow -->
+            <p class="type-eyebrow flex items-center gap-4 text-frnds-gold">
+              <span aria-hidden="true" class="inline-block h-px w-10 bg-frnds-gold"></span>
+              Dubai &middot; Fine Dining
+            </p>
+
+            <!-- H1 -->
+            <h1
+              id="hero-heading"
+              class="mt-6 max-w-xl text-balance font-display text-display-md font-medium text-frnds-cream"
+            >
+              <span class="sm:block">Fine Dining.</span>
+              <span class="sm:block">Art. Music.</span>
+              <span class="sm:block">Shared Experiences.</span>
+            </h1>
+
+            <!-- Supporting text -->
+            <p class="mt-6 max-w-md text-base leading-relaxed text-frnds-cream/75 md:text-lg">
+              A contemporary dining experience where cuisine, culture and
+              connection come together.
+            </p>
+
+            <!-- CTAs -->
+            <div class="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+              <a href="#reserve" class="btn-primary w-full sm:w-auto">
+                Reserve a Table
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+              <a href="#about" class="btn-outline w-full sm:w-auto">
+                Discover FRNDS
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scroll indicator — desktop only -->
+        <div
+          aria-hidden="true"
+          class="absolute bottom-8 left-12 z-10 hidden items-center gap-4 lg:flex"
+        >
+          <span class="block h-10 w-px bg-frnds-cream/40"></span>
+          <span class="text-[0.625rem] uppercase tracking-[0.3em] text-frnds-cream/50"
+            >Scroll to Explore</span
+          >
+        </div>
+      </section>
+
+      <!-- ============================================================
+           ABOUT / THE FRNDS EXPERIENCE — Phase 2
+           Warm cream editorial section contrasting the dark hero.
+           ============================================================ -->
+      <section
+        id="about"
+        class="relative overflow-hidden bg-frnds-cream py-section-lg text-frnds-burgundy"
+        aria-labelledby="about-heading"
+      >
+        <!-- Vertical edge labels — decorative, wide screens only -->
+        <p
+          aria-hidden="true"
+          class="absolute left-6 top-1/2 hidden -translate-y-1/2 rotate-180 text-[0.625rem] uppercase tracking-[0.35em] text-frnds-burgundy/40 [writing-mode:vertical-rl] xl:block"
+        >
+          Dubai &middot; UAE
+        </p>
+        <p
+          aria-hidden="true"
+          class="absolute right-6 top-1/2 hidden -translate-y-1/2 text-[0.625rem] uppercase tracking-[0.35em] text-frnds-burgundy/40 [writing-mode:vertical-rl] xl:block"
+        >
+          Dining &middot; Music &middot; Art &middot; Connection
+        </p>
+
+        <!-- Script watermark — decorative -->
+        <span
+          aria-hidden="true"
+          class="pointer-events-none absolute -bottom-6 left-0 select-none font-script text-[9rem] leading-none text-frnds-burgundy/[0.06] lg:text-[13rem]"
+          >FRNDS</span
+        >
+
+        <div class="container-content relative">
+          <div class="grid items-start gap-16 lg:grid-cols-12 lg:gap-12 xl:gap-16">
+            <!-- Text column -->
+            <div class="lg:col-span-5 lg:pt-10" data-reveal>
+              <p
+                class="type-eyebrow flex items-center gap-4 text-frnds-burgundy/70"
+              >
+                <span
+                  aria-hidden="true"
+                  class="inline-block h-px w-10 bg-frnds-gold"
+                ></span>
+                The FRNDS Experience
+              </p>
+
+              <h2
+                id="about-heading"
+                class="mt-6 font-display text-display-md font-medium text-frnds-burgundy"
+              >
+                <span class="block">More Than</span>
+                <span class="block">A Meal.</span>
+              </h2>
+
+              <p
+                class="mt-8 max-w-md text-base leading-relaxed text-frnds-burgundy/75 md:text-lg"
+              >
+                FRNDS is where great food, music, art and conversation come
+                together. A place to dine, unwind and make unforgettable
+                memories in the heart of Dubai.
+              </p>
+
+              <div class="mt-10">
+                <a href="#experiences" class="btn-burgundy">
+                  Discover FRNDS
+                  <span aria-hidden="true">&rarr;</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Image cluster — asymmetric editorial composition -->
+            <div class="relative lg:col-span-7 lg:pb-[10%]">
+              <!-- Primary: ambience — tall anchor, right-aligned -->
+              <div class="relative lg:ml-auto lg:w-[64%]">
+                <div
+                  aria-hidden="true"
+                  class="absolute -left-4 -top-4 hidden h-full w-full border border-frnds-burgundy/20 lg:block"
+                ></div>
+                <figure
+                  class="relative overflow-hidden border border-frnds-burgundy/10"
+                  data-reveal
+                >
+                  <img
+                    src="/images/about/frnds-ambience.jpg"
+                    alt="The burgundy awning and chandelier-lit entrance of FRNDS Grand Café in Dubai"
+                    width="819"
+                    height="1024"
+                    loading="lazy"
+                    decoding="async"
+                    class="w-full object-cover object-center transition-transform duration-700 ease-out-expo hover:scale-[1.03]"
+                  />
+                </figure>
+              </div>
+
+              <!-- Secondary: event — overlaps the ambience image's left edge -->
+              <figure
+                class="-mt-10 w-[68%] overflow-hidden border border-frnds-burgundy/10 sm:-mt-14 lg:absolute lg:left-0 lg:top-[38%] lg:mt-0 lg:w-[44%]"
+                data-reveal
+                data-reveal-delay="150"
+              >
+                <img
+                  src="/images/about/frnds-event.jpg"
+                  alt="A live singer performing for guests at FRNDS Dubai"
+                  width="640"
+                  height="853"
+                  loading="lazy"
+                  decoding="async"
+                  class="aspect-[4/5] w-full object-cover object-center transition-transform duration-700 ease-out-expo hover:scale-[1.03]"
+                />
+              </figure>
+
+              <!-- Tertiary: food & table — overlaps the ambience image's bottom-right -->
+              <figure
+                class="-mt-10 ml-auto w-[74%] overflow-hidden border border-frnds-burgundy/10 sm:-mt-14 lg:absolute lg:bottom-0 lg:right-0 lg:mt-0 lg:w-[46%]"
+                data-reveal
+                data-reveal-delay="300"
+              >
+                <img
+                  src="/images/about/frnds-foodtable.jpg"
+                  alt="Guests toasting with wine over desserts at FRNDS Dubai"
+                  width="819"
+                  height="1024"
+                  loading="lazy"
+                  decoding="async"
+                  class="aspect-[3/2] w-full object-cover object-bottom transition-transform duration-700 ease-out-expo hover:scale-[1.03]"
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           DINING / THE ART OF DINING — Phase 3
+           Deep burgundy cinematic section contrasting the cream About.
+           ============================================================ -->
+      <section
+        id="dining"
+        class="relative overflow-hidden bg-frnds-burgundy py-section-lg text-frnds-cream"
+        aria-labelledby="dining-heading"
+      >
+        <!-- Vertical edge label — decorative, wide screens only -->
+        <p
+          aria-hidden="true"
+          class="absolute right-6 top-1/2 hidden -translate-y-1/2 text-[0.625rem] uppercase tracking-[0.35em] text-frnds-cream/40 [writing-mode:vertical-rl] xl:block"
+        >
+          Food &middot; Drinks &middot; Moments
+        </p>
+
+        <!-- Script watermark — decorative -->
+        <span
+          aria-hidden="true"
+          class="pointer-events-none absolute -bottom-6 left-0 select-none font-script text-[9rem] leading-none text-frnds-cream/[0.05] lg:text-[13rem]"
+          >FRNDS</span
+        >
+
+        <div class="container-content relative">
+          <div class="grid items-start gap-16 lg:grid-cols-12 lg:gap-12 xl:gap-16">
+            <!-- Text column -->
+            <div class="lg:col-span-5 lg:pt-10" data-reveal>
+              <p class="type-eyebrow flex items-center gap-4 text-frnds-gold">
+                <span
+                  aria-hidden="true"
+                  class="inline-block h-px w-10 bg-frnds-gold"
+                ></span>
+                Dining at FRNDS
+              </p>
+
+              <h2
+                id="dining-heading"
+                class="mt-6 font-display text-display-md font-medium text-frnds-cream"
+              >
+                <span class="block">The Art</span>
+                <span class="block"
+                  ><em class="italic text-frnds-gold">of</em> Dining.</span
+                >
+              </h2>
+
+              <p
+                class="mt-8 max-w-md text-base leading-relaxed text-frnds-cream/75 md:text-lg"
+              >
+                A refined dining experience where exceptional flavours,
+                exquisite presentation and a vibrant atmosphere come together.
+                From elegant bites to signature dishes, FRNDS invites you to
+                indulge, share and savour the moment.
+              </p>
+
+              <div class="mt-10">
+                <a href="#menu" class="btn-outline-gold">
+                  Explore the Menu
+                  <span aria-hidden="true">&rarr;</span>
+                </a>
+              </div>
+
+              <p
+                class="mt-12 flex items-center gap-4 text-[0.625rem] uppercase tracking-[0.35em] text-frnds-cream/50"
+              >
+                <span
+                  aria-hidden="true"
+                  class="inline-block h-px w-10 bg-frnds-gold/50"
+                ></span>
+                Dubai &middot; UAE
+              </p>
+            </div>
+
+            <!-- Food collage — asymmetric editorial composition -->
+            <div class="relative lg:col-span-7 lg:pb-[8%]">
+              <!-- Primary: chef portioning a whole fish — tall anchor -->
+              <div class="relative lg:ml-[12%] lg:w-[54%]">
+                <div
+                  aria-hidden="true"
+                  class="absolute -left-4 -top-4 hidden h-full w-full border border-frnds-gold/25 lg:block"
+                ></div>
+                <figure
+                  class="relative overflow-hidden border border-frnds-gold/20"
+                  data-reveal
+                >
+                  <img
+                    src="/images/dining/frnds-food2.jpg"
+                    alt="A FRNDS chef portioning a whole fresh fish at the counter"
+                    width="577"
+                    height="1024"
+                    loading="lazy"
+                    decoding="async"
+                    class="w-full object-cover object-center transition-transform duration-700 ease-out-expo hover:scale-[1.03]"
+                  />
+                </figure>
+              </div>
+
+              <!-- Supporting: breakfast spread — overlaps the primary's top-right -->
+              <figure
+                class="-mt-10 ml-auto w-[74%] overflow-hidden border border-frnds-gold/20 sm:-mt-14 lg:absolute lg:right-0 lg:top-0 lg:mt-0 lg:w-[44%]"
+                data-reveal
+                data-reveal-delay="150"
+              >
+                <img
+                  src="/images/dining/frnds-food4.jpg"
+                  alt="A breakfast spread of eggs, avocado toast, pastries and coffee on FRNDS plateware"
+                  width="720"
+                  height="882"
+                  loading="lazy"
+                  decoding="async"
+                  class="aspect-[4/5] w-full object-cover object-center transition-transform duration-700 ease-out-expo hover:scale-[1.03]"
+                />
+              </figure>
+
+              <!-- Drink + dessert pair — stacked on mobile, right column on desktop -->
+              <div class="mt-4 grid grid-cols-2 gap-4 lg:contents">
+                <figure
+                  class="overflow-hidden border border-frnds-gold/20 lg:absolute lg:right-0 lg:top-[36%] lg:w-[30%]"
+                  data-reveal
+                  data-reveal-delay="250"
+                >
+                  <img
+                    src="/images/dining/frnds-food3.jpg"
+                    alt="Two amber coupe cocktails garnished with flowers, served at the FRNDS bar"
+                    width="819"
+                    height="1024"
+                    loading="lazy"
+                    decoding="async"
+                    class="aspect-[4/5] w-full object-cover object-center transition-transform duration-700 ease-out-expo hover:scale-[1.03]"
+                  />
+                </figure>
+                <figure
+                  class="overflow-hidden border border-frnds-gold/20 lg:absolute lg:bottom-0 lg:right-[8%] lg:w-[38%]"
+                  data-reveal
+                  data-reveal-delay="350"
+                >
+                  <img
+                    src="/images/dining/frnds-food5.jpg"
+                    alt="French toast with berries and cream being cut with gold cutlery at FRNDS"
+                    width="835"
+                    height="1024"
+                    loading="lazy"
+                    decoding="async"
+                    class="aspect-[4/5] w-full object-cover object-center transition-transform duration-700 ease-out-expo hover:scale-[1.03]"
+                  />
+                </figure>
+              </div>
+
+              <!-- Fifth: shared table detail — small, overlaps the primary's bottom-left -->
+              <figure
+                class="-mt-10 w-[68%] overflow-hidden border border-frnds-gold/20 sm:-mt-14 lg:absolute lg:bottom-[6%] lg:left-0 lg:mt-0 lg:w-[24%]"
+                data-reveal
+                data-reveal-delay="450"
+              >
+                <img
+                  src="/images/dining/frnds-food1.jpg"
+                  alt="Guests sharing dishes across a marble table at FRNDS"
+                  width="720"
+                  height="960"
+                  loading="lazy"
+                  decoding="async"
+                  class="aspect-[4/5] w-full object-cover object-center transition-transform duration-700 ease-out-expo hover:scale-[1.03]"
+                />
+              </figure>
+            </div>
+          </div>
+
+          <!-- Closing transition — restrained editorial CTA row -->
+          <div
+            class="mt-16 flex items-center gap-6 sm:gap-10 lg:mt-24"
+            data-reveal
+          >
+            <span aria-hidden="true" class="h-px flex-1 bg-frnds-gold/25"></span>
+            <div class="flex flex-col items-center gap-5 text-center">
+              <p class="type-eyebrow text-frnds-gold/80">
+                Experience the Table
+              </p>
+              <a href="#menu" class="btn-outline-gold">
+                Explore the Menu
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+            <span aria-hidden="true" class="h-px flex-1 bg-frnds-gold/25"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           GALLERY / MOMENTS AT FRNDS — Phase 6
+           Warm cream editorial gallery contrasting the burgundy Dining.
+           ============================================================ -->
+      <section
+        id="gallery"
+        class="relative overflow-hidden bg-frnds-cream py-section-lg text-frnds-burgundy"
+        aria-labelledby="gallery-heading"
+      >
+        <!-- Vertical edge label — decorative, wide screens only -->
+        <p
+          aria-hidden="true"
+          class="absolute right-6 top-1/2 hidden -translate-y-1/2 text-[0.625rem] uppercase tracking-[0.35em] text-frnds-burgundy/40 [writing-mode:vertical-rl] xl:block"
+        >
+          People &middot; Food &middot; Drinks &middot; Moments
+        </p>
+
+        <!-- Script watermark — decorative -->
+        <span
+          aria-hidden="true"
+          class="pointer-events-none absolute -bottom-6 left-0 select-none font-script text-[9rem] leading-none text-frnds-burgundy/[0.06] lg:text-[13rem]"
+          >FRNDS</span
+        >
+
+        <div class="container-content relative">
+          <div class="grid items-start gap-16 lg:grid-cols-12 lg:gap-12 xl:gap-16">
+            <!-- Text column -->
+            <div class="relative lg:col-span-4 lg:pt-10 lg:pl-10" data-reveal>
+              <!-- Thin vertical gold line — decorative -->
+              <span
+                aria-hidden="true"
+                class="absolute left-0 top-2 hidden h-[72%] w-px bg-frnds-gold/50 lg:block"
+              ></span>
+
+              <p
+                class="type-eyebrow flex items-center gap-4 text-frnds-burgundy/70"
+              >
+                <span
+                  aria-hidden="true"
+                  class="inline-block h-px w-10 bg-frnds-gold"
+                ></span>
+                Gallery
+              </p>
+
+              <h2
+                id="gallery-heading"
+                class="mt-6 font-display text-display-md font-medium text-frnds-burgundy"
+              >
+                <span class="block">Moments</span>
+                <span class="block text-frnds-gold">at FRNDS.</span>
+              </h2>
+
+              <p
+                class="mt-8 max-w-md text-base leading-relaxed text-frnds-burgundy/75 md:text-lg"
+              >
+                A glimpse into the people, flavours and experiences that make
+                FRNDS extraordinary. Every moment here tells a story.
+              </p>
+
+              <div class="mt-10">
+                <a href="#gallery" class="btn-outline-burgundy">
+                  Explore More
+                  <span aria-hidden="true">&rarr;</span>
+                </a>
+              </div>
+
+              <p
+                class="mt-12 flex items-center gap-4 text-[0.625rem] uppercase tracking-[0.35em] text-frnds-burgundy/50"
+              >
+                <span
+                  aria-hidden="true"
+                  class="inline-block h-px w-10 bg-frnds-gold/60"
+                ></span>
+                Dubai &middot; UAE
+              </p>
+            </div>
+
+            <!-- Gallery collage — asymmetric editorial composition -->
+            <div class="relative lg:col-span-8 lg:pb-[30%]">
+              <!-- G1 — primary: tableside flambé in the dining room -->
+              <div class="relative lg:ml-[8%] lg:w-[64%]">
+                <div
+                  aria-hidden="true"
+                  class="absolute -left-4 -top-4 hidden h-full w-full border border-frnds-gold/30 lg:block"
+                ></div>
+                <figure
+                  class="relative overflow-hidden border border-frnds-gold/40"
+                  data-reveal
+                >
+                  <img
+                    src="/images/experiences/frnds-img6.jpg"
+                    alt="A server flambéing a dish in a parmesan wheel beside a table of guests at FRNDS"
+                    width="768"
+                    height="1024"
+                    loading="lazy"
+                    decoding="async"
+                    class="aspect-[3/2] w-full object-cover object-[center_35%] transition-transform duration-700 ease-out-expo hover:scale-[1.03]"
+                  />
+                </figure>
+              </div>
+
+              <!-- G2 — people: friends sharing a terrace spread -->
+              <figure
+                class="mt-6 ml-auto w-[90%] overflow-hidden border border-frnds-gold/40 lg:absolute lg:left-0 lg:top-[42%] lg:ml-0 lg:mt-0 lg:w-[34%]"
+                data-reveal
+                data-reveal-delay="150"
+              >
+                <img
+                  src="/images/experiences/frnds-img2.jpg"
+                  alt="Friends sharing a spread of dishes on the terrace at FRNDS"
+                  width="768"
+                  height="1024"
+                  loading="lazy"
+                  decoding="async"
+                  class="aspect-[4/3] w-full object-cover object-center transition-transform duration-700 ease-out-expo hover:scale-[1.03]"
+                />
+              </figure>
+
+              <!-- G3 — interior detail: shisha table setting, portrait right edge -->
+              <figure
+                class="mt-6 w-[80%] overflow-hidden border border-frnds-gold/40 lg:absolute lg:right-0 lg:top-[6%] lg:mt-0 lg:w-[32%]"
+                data-reveal
+                data-reveal-delay="250"
+              >
+                <img
+                  src="/images/experiences/frnds-img5.jpg"
+                  alt="A table set with a shisha, burgundy napkins and a lamp on the FRNDS terrace at night"
+                  width="828"
+                  height="1024"
+                  loading="lazy"
+                  decoding="async"
+                  class="aspect-[4/5] w-full object-cover object-center transition-transform duration-700 ease-out-expo hover:scale-[1.03]"
+                />
+              </figure>
+
+              <!-- G4 — food: sushi garnish close-up, lower-left -->
+              <figure
+                class="mt-6 ml-auto w-[90%] overflow-hidden border border-frnds-gold/40 lg:absolute lg:bottom-0 lg:left-[6%] lg:ml-0 lg:mt-0 lg:w-[30%]"
+                data-reveal
+                data-reveal-delay="350"
+              >
+                <img
+                  src="/images/experiences/frnds-img3.jpg"
+                  alt="A chef garnishing sushi rolls at FRNDS"
+                  width="768"
+                  height="1024"
+                  loading="lazy"
+                  decoding="async"
+                  class="aspect-[4/3] w-full object-cover object-[center_60%] transition-transform duration-700 ease-out-expo hover:scale-[1.03]"
+                />
+              </figure>
+
+              <!-- G5 — craft: chef plating under golden lamps -->
+              <figure
+                class="mt-6 ml-auto w-[80%] overflow-hidden border border-frnds-gold/40 lg:absolute lg:bottom-[4%] lg:left-[38%] lg:ml-0 lg:mt-0 lg:w-[26%]"
+                data-reveal
+                data-reveal-delay="450"
+              >
+                <img
+                  src="/images/experiences/frnds-img1.jpg"
+                  alt="A FRNDS chef plating a dish under golden heat lamps"
+                  width="768"
+                  height="1024"
+                  loading="lazy"
+                  decoding="async"
+                  class="aspect-[4/5] w-full object-cover object-center transition-transform duration-700 ease-out-expo hover:scale-[1.03]"
+                />
+              </figure>
+
+              <!-- G6 — live experience: performer serving drinks, lower-right -->
+              <figure
+                class="mt-6 w-full overflow-hidden border border-frnds-gold/40 lg:absolute lg:bottom-0 lg:right-[4%] lg:mt-0 lg:w-[30%]"
+                data-reveal
+                data-reveal-delay="550"
+              >
+                <img
+                  src="/images/experiences/frnds-img4.jpg"
+                  alt="A performer serving drinks to guests during a live event at FRNDS"
+                  width="768"
+                  height="1024"
+                  loading="lazy"
+                  decoding="async"
+                  class="aspect-[4/5] w-full object-cover object-center transition-transform duration-700 ease-out-expo hover:scale-[1.03]"
+                />
+              </figure>
+            </div>
+          </div>
+
+          <!-- Bottom-right editorial microcopy — decorative concept copy -->
+          <div class="mt-14 flex items-center justify-end gap-6" data-reveal>
+            <span
+              aria-hidden="true"
+              class="hidden h-px w-16 bg-frnds-gold/50 sm:block"
+            ></span>
+            <p
+              class="text-right text-[0.625rem] uppercase leading-relaxed tracking-[0.3em] text-frnds-burgundy/60"
+            >
+              Good food brings<br />
+              great people together.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           RESERVATION — Phase 8
+           Deep burgundy enquiry section closing the page.
+           ============================================================ -->
+      <section
+        id="reserve"
+        class="relative overflow-hidden bg-frnds-burgundy-deep py-section-lg text-frnds-cream"
+        aria-labelledby="reserve-heading"
+      >
+        <!-- Script watermark — decorative -->
+        <span
+          aria-hidden="true"
+          class="pointer-events-none absolute -bottom-6 left-0 select-none font-script text-[9rem] leading-none text-frnds-cream/[0.05] lg:text-[13rem]"
+          >FRNDS</span
+        >
+
+        <div class="container-content relative">
+          <div class="grid items-start gap-16 lg:grid-cols-12 lg:gap-12 xl:gap-16">
+            <!-- Text column -->
+            <div class="lg:col-span-5 lg:pt-10" data-reveal>
+              <p class="type-eyebrow flex items-center gap-4 text-frnds-gold">
+                <span
+                  aria-hidden="true"
+                  class="inline-block h-px w-10 bg-frnds-gold"
+                ></span>
+                Reserve Your Table
+              </p>
+
+              <h2
+                id="reserve-heading"
+                class="mt-6 font-display text-display-md font-medium text-frnds-cream"
+              >
+                <span class="block">Your Table</span>
+                <span class="block text-frnds-gold">Awaits.</span>
+              </h2>
+
+              <p
+                class="mt-8 max-w-md text-base leading-relaxed text-frnds-cream/75 md:text-lg"
+              >
+                Tell us when you would like to join us and we will take care of
+                the rest. Whether it is dinner, brunch or a private celebration,
+                every evening at FRNDS is made to be shared.
+              </p>
+
+              <p class="mt-10 text-sm leading-relaxed text-frnds-cream/60">
+                Prefer to chat?
+                <a
+                  href="#reserve"
+                  class="text-frnds-gold underline decoration-frnds-gold/40 underline-offset-4 transition-colors duration-300 hover:decoration-frnds-gold"
+                  >Message us on WhatsApp</a
+                >
+                and we will arrange your table personally.
+              </p>
+
+              <p
+                class="mt-12 flex items-center gap-4 text-[0.625rem] uppercase tracking-[0.35em] text-frnds-cream/50"
+              >
+                <span
+                  aria-hidden="true"
+                  class="inline-block h-px w-10 bg-frnds-gold/50"
+                ></span>
+                Dubai &middot; UAE
+              </p>
+            </div>
+
+            <!-- Reservation enquiry form -->
+            <div class="lg:col-span-7" data-reveal data-reveal-delay="150">
+              <form
+                id="reservation-form"
+                class="border border-frnds-gold/20 p-6 sm:p-10"
+                novalidate
+              >
+                <div class="grid gap-x-8 gap-y-8 sm:grid-cols-2">
+                  <div>
+                    <label for="res-name" class="form-label">Name</label>
+                    <input
+                      id="res-name"
+                      name="name"
+                      type="text"
+                      autocomplete="name"
+                      required
+                      class="form-input"
+                      placeholder="Your full name"
+                    />
+                  </div>
+
+                  <div>
+                    <label for="res-email" class="form-label">Email</label>
+                    <input
+                      id="res-email"
+                      name="email"
+                      type="email"
+                      autocomplete="email"
+                      required
+                      class="form-input"
+                      placeholder="you@example.com"
+                    />
+                  </div>
+
+                  <div>
+                    <label for="res-phone" class="form-label">Phone</label>
+                    <input
+                      id="res-phone"
+                      name="phone"
+                      type="tel"
+                      autocomplete="tel"
+                      required
+                      class="form-input"
+                      placeholder="+971 ..."
+                    />
+                  </div>
+
+                  <div class="relative">
+                    <label for="res-type" class="form-label"
+                      >Reservation Type</label
+                    >
+                    <select
+                      id="res-type"
+                      name="type"
+                      required
+                      class="form-input appearance-none pr-8"
+                    >
+                      <option value="" disabled selected>
+                        Select an occasion
+                      </option>
+                      <option value="dining">Dining</option>
+                      <option value="brunch">Brunch</option>
+                      <option value="private-event">Private Event</option>
+                      <option value="group-corporate">
+                        Group / Corporate
+                      </option>
+                    </select>
+                    <svg
+                      aria-hidden="true"
+                      class="pointer-events-none absolute bottom-4 right-1 h-4 w-4 text-frnds-gold/70"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path d="M4 6l4 4 4-4" />
+                    </svg>
+                  </div>
+
+                  <div>
+                    <label for="res-date" class="form-label">Date</label>
+                    <input
+                      id="res-date"
+                      name="date"
+                      type="date"
+                      required
+                      class="form-input"
+                    />
+                  </div>
+
+                  <div>
+                    <label for="res-time" class="form-label"
+                      >Preferred Time</label
+                    >
+                    <input
+                      id="res-time"
+                      name="time"
+                      type="time"
+                      class="form-input"
+                    />
+                  </div>
+
+                  <div>
+                    <label for="res-guests" class="form-label"
+                      >Number of Guests</label
+                    >
+                    <input
+                      id="res-guests"
+                      name="guests"
+                      type="number"
+                      min="1"
+                      max="20"
+                      inputmode="numeric"
+                      required
+                      class="form-input"
+                      placeholder="2"
+                    />
+                  </div>
+
+                  <div class="sm:col-span-2">
+                    <label for="res-message" class="form-label">Message</label>
+                    <textarea
+                      id="res-message"
+                      name="message"
+                      rows="3"
+                      class="form-input resize-none"
+                      placeholder="Occasion, seating preference, dietary notes..."
+                    ></textarea>
+                  </div>
+                </div>
+
+                <div class="mt-10">
+                  <button
+                    type="submit"
+                    class="btn-outline-gold w-full sm:w-auto"
+                  >
+                    Request a Reservation
+                    <span aria-hidden="true">&rarr;</span>
+                  </button>
+                </div>
+              </form>
+
+              <!-- Success state — revealed after submit -->
+              <div
+                id="reservation-success"
+                hidden
+                class="border border-frnds-gold/20 p-10 text-center sm:p-14"
+              >
+                <p class="font-script text-5xl text-frnds-gold">Thank you</p>
+                <p
+                  class="mt-6 font-display text-3xl font-medium text-frnds-cream"
+                >
+                  Your request has been received.
+                </p>
+                <p
+                  class="mx-auto mt-4 max-w-sm text-sm leading-relaxed text-frnds-cream/70"
+                >
+                  Our team will be in touch shortly to confirm your table at
+                  FRNDS.
+                </p>
+                <button
+                  type="button"
+                  data-reservation-reset
+                  class="mt-8 text-[0.625rem] uppercase tracking-[0.3em] text-frnds-gold/80 underline decoration-frnds-gold/40 underline-offset-4 transition-colors duration-300 hover:text-frnds-gold"
+                >
+                  Make another request
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           LOCATION & CONTACT — Phase 9
+           Warm cream editorial close: find us / get in touch.
+           ============================================================ -->
+      <section
+        id="contact"
+        class="relative overflow-hidden bg-frnds-cream py-section-lg text-frnds-burgundy"
+        aria-labelledby="contact-heading"
+      >
+        <div class="container-content relative">
+          <div
+            class="grid gap-16 lg:grid-cols-2 lg:gap-12 xl:gap-20"
+          >
+            <!-- LEFT — Find us -->
+            <div data-reveal>
+              <p
+                class="type-eyebrow flex items-center gap-4 text-frnds-burgundy/70"
+              >
+                <span
+                  aria-hidden="true"
+                  class="inline-block h-px w-10 bg-frnds-gold"
+                ></span>
+                Find Us
+              </p>
+
+              <h2
+                id="contact-heading"
+                class="mt-6 font-display text-display-md font-medium text-frnds-burgundy"
+              >
+                FRNDS, <span class="text-frnds-gold">Dubai</span>
+              </h2>
+
+              <p
+                class="mt-8 max-w-md text-base leading-relaxed text-frnds-burgundy/75"
+              >
+                Located in the heart of Dubai Mall, FRNDS offers an
+                unforgettable dining experience surrounded by the city's
+                vibrant energy.
+              </p>
+
+              <ul class="mt-10 space-y-6">
+                <li class="flex items-start gap-4">
+                  <span
+                    aria-hidden="true"
+                    class="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-frnds-gold/40 text-frnds-burgundy"
+                  >
+                    <svg
+                      class="h-4 w-4"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path
+                        d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"
+                      />
+                      <circle cx="12" cy="10" r="2.5" />
+                    </svg>
+                  </span>
+                  <div>
+                    <p
+                      class="text-[0.625rem] uppercase tracking-[0.3em] text-frnds-burgundy/50"
+                    >
+                      Address
+                    </p>
+                    <p class="mt-1 text-sm leading-relaxed text-frnds-burgundy">
+                      Dubai Mall, Downtown Dubai,<br />Dubai, UAE
+                    </p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-4">
+                  <span
+                    aria-hidden="true"
+                    class="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-frnds-gold/40 text-frnds-burgundy"
+                  >
+                    <svg
+                      class="h-4 w-4"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <circle cx="12" cy="12" r="9" />
+                      <path d="M12 7v5l3 2" />
+                    </svg>
+                  </span>
+                  <div>
+                    <p
+                      class="text-[0.625rem] uppercase tracking-[0.3em] text-frnds-burgundy/50"
+                    >
+                      Opening Hours
+                    </p>
+                    <p class="mt-1 text-sm leading-relaxed text-frnds-burgundy">
+                      Daily<br />12:00 PM &ndash; 2:00 AM
+                    </p>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="mt-10">
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=FRNDS+Grand+Cafe+Dubai+Mall"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-outline-burgundy"
+                >
+                  Get Directions
+                  <span aria-hidden="true">&rarr;</span>
+                </a>
+              </div>
+
+              <!-- Storefront + map placeholder -->
+              <div class="mt-12 grid grid-cols-2 gap-4">
+                <div
+                  role="img"
+                  aria-label="Map placeholder showing FRNDS located at Dubai Mall, Downtown Dubai"
+                  class="map-placeholder relative aspect-[5/4] overflow-hidden border border-frnds-burgundy/10"
+                >
+                  <span
+                    aria-hidden="true"
+                    class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-frnds-burgundy"
+                  >
+                    <svg
+                      class="h-7 w-7"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path
+                        d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11zm0-8.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="absolute bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap text-[0.625rem] uppercase tracking-[0.3em] text-frnds-burgundy/60"
+                    >Dubai Mall</span
+                  >
+                </div>
+                <figure
+                  class="overflow-hidden border border-frnds-burgundy/10"
+                  data-reveal
+                  data-reveal-delay="150"
+                >
+                  <img
+                    src="/images/about/frnds-ambience.jpg"
+                    alt="The burgundy awning and chandelier-lit entrance of FRNDS Grand Café in Dubai"
+                    width="819"
+                    height="1024"
+                    loading="lazy"
+                    decoding="async"
+                    class="aspect-[5/4] w-full object-cover object-top transition-transform duration-700 ease-out-expo hover:scale-[1.03]"
+                  />
+                </figure>
+              </div>
+            </div>
+
+            <!-- RIGHT — Contact (thin gold divider on desktop) -->
+            <div
+              class="lg:border-l lg:border-frnds-gold/25 lg:pl-12 xl:pl-20"
+              data-reveal
+              data-reveal-delay="150"
+            >
+              <p
+                class="type-eyebrow flex items-center gap-4 text-frnds-burgundy/70"
+              >
+                <span
+                  aria-hidden="true"
+                  class="inline-block h-px w-10 bg-frnds-gold"
+                ></span>
+                Contact
+              </p>
+
+              <h3
+                class="mt-6 font-display text-display-md font-medium text-frnds-burgundy"
+              >
+                Get in <span class="text-frnds-gold">Touch</span>
+              </h3>
+
+              <p
+                class="mt-8 max-w-md text-base leading-relaxed text-frnds-burgundy/75"
+              >
+                Have a question, planning a special occasion, or want to make a
+                reservation? We'd love to hear from you.
+              </p>
+
+              <ul class="mt-10 space-y-6">
+                <li class="flex items-center gap-4">
+                  <span
+                    aria-hidden="true"
+                    class="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-frnds-gold/40 text-frnds-burgundy"
+                  >
+                    <svg
+                      class="h-4 w-4"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path
+                        d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"
+                      />
+                    </svg>
+                  </span>
+                  <div>
+                    <p
+                      class="text-[0.625rem] uppercase tracking-[0.3em] text-frnds-burgundy/50"
+                    >
+                      Phone
+                    </p>
+                    <a
+                      href="tel:+97141234567"
+                      class="mt-1 block text-sm text-frnds-burgundy transition-colors duration-300 hover:text-frnds-gold"
+                      >+971 4 123 4567</a
+                    >
+                  </div>
+                </li>
+                <li class="flex items-center gap-4">
+                  <span
+                    aria-hidden="true"
+                    class="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-frnds-gold/40 text-frnds-burgundy"
+                  >
+                    <svg
+                      class="h-4 w-4"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <path
+                        d="M21 12a9 9 0 1 1-4.4-7.7L21 3l-1.3 4.4A9 9 0 0 1 21 12z"
+                      />
+                    </svg>
+                  </span>
+                  <div>
+                    <p
+                      class="text-[0.625rem] uppercase tracking-[0.3em] text-frnds-burgundy/50"
+                    >
+                      WhatsApp
+                    </p>
+                    <a
+                      href="#reserve"
+                      class="mt-1 block text-sm text-frnds-burgundy transition-colors duration-300 hover:text-frnds-gold"
+                      >Chat with us</a
+                    >
+                  </div>
+                </li>
+                <li class="flex items-center gap-4">
+                  <span
+                    aria-hidden="true"
+                    class="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-frnds-gold/40 text-frnds-burgundy"
+                  >
+                    <svg
+                      class="h-4 w-4"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    >
+                      <rect x="3" y="3" width="18" height="18" rx="5" />
+                      <circle cx="12" cy="12" r="4" />
+                      <circle cx="17" cy="7" r="0.5" fill="currentColor" />
+                    </svg>
+                  </span>
+                  <div>
+                    <p
+                      class="text-[0.625rem] uppercase tracking-[0.3em] text-frnds-burgundy/50"
+                    >
+                      Instagram
+                    </p>
+                    <a
+                      href="https://instagram.com/frnds.dubai"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="mt-1 block text-sm text-frnds-burgundy transition-colors duration-300 hover:text-frnds-gold"
+                      >@frnds.dubai</a
+                    >
+                  </div>
+                </li>
+              </ul>
+
+              <div class="mt-10">
+                <a href="#reserve" class="btn-outline-burgundy">
+                  Get in Touch
+                  <span aria-hidden="true">&rarr;</span>
+                </a>
+              </div>
+
+              <figure
+                class="ml-auto mt-12 w-[70%] overflow-hidden border border-frnds-burgundy/10 sm:w-[55%] lg:w-[62%]"
+                data-reveal
+                data-reveal-delay="300"
+              >
+                <img
+                  src="/images/experiences/frnds-img5.jpg"
+                  alt="A lamp-lit table set with a shisha and burgundy napkins on the FRNDS terrace at night"
+                  width="828"
+                  height="1024"
+                  loading="lazy"
+                  decoding="async"
+                  class="aspect-[4/5] w-full object-cover object-center transition-transform duration-700 ease-out-expo hover:scale-[1.03]"
+                />
+              </figure>
+            </div>
+          </div>
+
+          <!-- Bottom detail row -->
+          <div
+            class="mt-16 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between"
+            data-reveal
+          >
+            <p
+              class="flex items-center gap-4 text-[0.625rem] uppercase tracking-[0.35em] text-frnds-burgundy/50"
+            >
+              <span
+                aria-hidden="true"
+                class="inline-block h-px w-10 bg-frnds-gold/60"
+              ></span>
+              Dubai &middot; UAE
+            </p>
+            <p
+              class="flex items-center gap-4 text-[0.625rem] uppercase tracking-[0.3em] text-frnds-burgundy/60"
+            >
+              <span
+                aria-hidden="true"
+                class="hidden h-px w-16 bg-frnds-gold/50 sm:block"
+              ></span>
+              Good food brings great people together.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================================================
+         FOOTER — Phase 10
+         Warm image strip over a near-black editorial footer.
+         ============================================================ -->
+    <footer id="site-footer" class="relative bg-frnds-black text-frnds-cream">
+      <!-- Warm dining image strip — decorative -->
+      <div class="relative h-28 overflow-hidden sm:h-36" aria-hidden="true">
+        <img
+          src="/images/about/frnds-ambience.jpg"
+          alt=""
+          width="819"
+          height="1024"
+          loading="lazy"
+          decoding="async"
+          class="h-full w-full object-cover object-bottom"
+        />
+        <div class="absolute inset-0 bg-frnds-black/45"></div>
+      </div>
+
+      <!-- Centered ornament overlapping the strip -->
+      <div class="relative z-10 -mt-6 flex justify-center" aria-hidden="true">
+        <span
+          class="grid h-12 w-12 place-items-center rounded-full border border-frnds-gold/50 bg-frnds-black text-frnds-gold"
+        >
+          <svg
+            class="h-5 w-5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.4"
+            stroke-linecap="round"
+          >
+            <path
+              d="M12 4c1.3 2.2 1.9 4 1.9 5.6 0 1.5-.7 2.7-1.9 3.4-1.2-.7-1.9-1.9-1.9-3.4C10.1 8 10.7 6.2 12 4z"
+            />
+            <path
+              d="M8 10.5c-1.6.4-2.6 1.7-2.6 3 0 1.2.9 2.2 2.1 2.2 1.3 0 2.4-1.1 2.4-2.5"
+            />
+            <path
+              d="M16 10.5c1.6.4 2.6 1.7 2.6 3 0 1.2-.9 2.2-2.1 2.2-1.3 0-2.4-1.1-2.4-2.5"
+            />
+            <path d="M9.5 15.8h5" />
+            <path d="M12 17.5v3" />
+          </svg>
+        </span>
+      </div>
+
+      <div class="container-content relative pb-10 pt-14 lg:pt-16">
+        <div
+          class="grid gap-12 text-center lg:grid-cols-12 lg:gap-8 lg:text-left"
+        >
+          <!-- Brand column -->
+          <div class="lg:col-span-4" data-reveal>
+            <a href="#" aria-label="FRNDS Dubai — back to top">
+              <img
+                src="/images/hero/frnds-logo.avif"
+                alt="FRNDS Dubai"
+                class="mx-auto h-10 w-auto lg:mx-0"
+                width="160"
+                height="40"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <p
+              class="mt-6 text-[0.625rem] uppercase leading-relaxed tracking-[0.3em] text-frnds-gold"
+            >
+              Fine Dining. Art. Music.<br />Shared Experiences.
+            </p>
+            <p
+              class="mx-auto mt-5 max-w-xs text-sm leading-relaxed text-frnds-cream/65 lg:mx-0"
+            >
+              A place where great food, music and extraordinary people come
+              together in the heart of Dubai.
+            </p>
+            <div class="mt-8 flex justify-center gap-3 lg:justify-start">
+              <a
+                href="https://instagram.com/frnds.dubai"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="FRNDS on Instagram"
+                class="grid h-10 w-10 place-items-center rounded-full border border-frnds-gold/40 text-frnds-cream/80 transition-colors duration-300 hover:border-frnds-gold hover:text-frnds-gold"
+              >
+                <svg
+                  class="h-4 w-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17" cy="7" r="0.5" fill="currentColor" />
+                </svg>
+              </a>
+              <a
+                href="#reserve"
+                aria-label="Chat with FRNDS on WhatsApp"
+                class="grid h-10 w-10 place-items-center rounded-full border border-frnds-gold/40 text-frnds-cream/80 transition-colors duration-300 hover:border-frnds-gold hover:text-frnds-gold"
+              >
+                <svg
+                  class="h-4 w-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M21 12a9 9 0 1 1-4.4-7.7L21 3l-1.3 4.4A9 9 0 0 1 21 12z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="tel:+97141234567"
+                aria-label="Call FRNDS"
+                class="grid h-10 w-10 place-items-center rounded-full border border-frnds-gold/40 text-frnds-cream/80 transition-colors duration-300 hover:border-frnds-gold hover:text-frnds-gold"
+              >
+                <svg
+                  class="h-4 w-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Navigation column -->
+          <div
+            class="lg:col-span-2 lg:border-l lg:border-frnds-gold/20 lg:pl-8"
+            data-reveal
+            data-reveal-delay="100"
+          >
+            <nav aria-label="Footer">
+              <ul
+                class="space-y-4 text-xs uppercase tracking-[0.25em] text-frnds-cream/70"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="transition-colors duration-300 hover:text-frnds-gold"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#about"
+                    class="transition-colors duration-300 hover:text-frnds-gold"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#dining"
+                    class="transition-colors duration-300 hover:text-frnds-gold"
+                    >Dining</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#gallery"
+                    class="transition-colors duration-300 hover:text-frnds-gold"
+                    >Gallery</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#contact"
+                    class="transition-colors duration-300 hover:text-frnds-gold"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- Reserve + contact column -->
+          <div
+            class="lg:col-span-3 lg:border-l lg:border-frnds-gold/20 lg:pl-8"
+            data-reveal
+            data-reveal-delay="200"
+          >
+            <a href="#reserve" class="btn-outline-gold">
+              Reserve a Table
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+            <ul
+              class="mt-8 space-y-4 text-sm text-frnds-cream/70"
+            >
+              <li class="flex items-center justify-center gap-3 lg:justify-start">
+                <svg
+                  aria-hidden="true"
+                  class="h-4 w-4 shrink-0 text-frnds-gold/70"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"
+                  />
+                  <circle cx="12" cy="10" r="2.5" />
+                </svg>
+                Dubai Mall, Downtown Dubai, UAE
+              </li>
+              <li class="flex items-center justify-center gap-3 lg:justify-start">
+                <svg
+                  aria-hidden="true"
+                  class="h-4 w-4 shrink-0 text-frnds-gold/70"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"
+                  />
+                </svg>
+                <a
+                  href="tel:+97141234567"
+                  class="transition-colors duration-300 hover:text-frnds-gold"
+                  >+971 4 123 4567</a
+                >
+              </li>
+              <li class="flex items-center justify-center gap-3 lg:justify-start">
+                <svg
+                  aria-hidden="true"
+                  class="h-4 w-4 shrink-0 text-frnds-gold/70"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M21 12a9 9 0 1 1-4.4-7.7L21 3l-1.3 4.4A9 9 0 0 1 21 12z"
+                  />
+                </svg>
+                <a
+                  href="#reserve"
+                  class="transition-colors duration-300 hover:text-frnds-gold"
+                  >Chat with us</a
+                >
+              </li>
+              <li class="flex items-center justify-center gap-3 lg:justify-start">
+                <svg
+                  aria-hidden="true"
+                  class="h-4 w-4 shrink-0 text-frnds-gold/70"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17" cy="7" r="0.5" fill="currentColor" />
+                </svg>
+                <a
+                  href="https://instagram.com/frnds.dubai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="transition-colors duration-300 hover:text-frnds-gold"
+                  >@frnds.dubai</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Decorative mark + microcopy column -->
+          <div
+            class="lg:col-span-3 lg:border-l lg:border-frnds-gold/20 lg:pl-8"
+            data-reveal
+            data-reveal-delay="300"
+          >
+            <p
+              aria-hidden="true"
+              class="select-none font-script text-7xl leading-none text-frnds-cream/10"
+            >
+              FRNDS
+            </p>
+            <p
+              class="mt-8 flex items-center justify-center gap-4 text-[0.625rem] uppercase leading-relaxed tracking-[0.3em] text-frnds-cream/50 lg:justify-start"
+            >
+              <span
+                aria-hidden="true"
+                class="hidden h-px w-10 bg-frnds-gold/50 lg:block"
+              ></span>
+              Good food brings<br />great people together.
+            </p>
+          </div>
+        </div>
+
+        <!-- Bottom legal bar -->
+        <div
+          class="mt-16 flex flex-col items-center gap-4 border-t border-frnds-gold/20 pt-8 text-[0.625rem] uppercase tracking-[0.25em] text-frnds-cream/45 sm:flex-row sm:justify-between"
+          data-reveal
+        >
+          <p>&copy; 2026 FRNDS. All rights reserved.</p>
+          <p class="flex items-center gap-4">
+            <a
+              href="#"
+              class="transition-colors duration-300 hover:text-frnds-gold"
+              >Privacy Policy</a
+            >
+            <span aria-hidden="true" class="text-frnds-gold/40">|</span>
+            <a
+              href="#"
+              class="transition-colors duration-300 hover:text-frnds-gold"
+              >Terms of Service</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,344 @@
+/* ==========================================================================
+   FRNDS Dubai — Global Stylesheet
+   Tailwind handles most styling; this file holds what Tailwind alone
+   doesn't express cleanly: CSS vars, base typography, reusable type
+   classes, and small utilities.
+   ========================================================================== */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --------------------------------------------------------------------------
+   CSS custom properties (mirrors tailwind.config.js tokens — keep in sync)
+   -------------------------------------------------------------------------- */
+@layer base {
+  :root {
+    --frnds-black: #0d0506;
+    --frnds-burgundy: #3a080d;
+    --frnds-burgundy-deep: #24060a;
+    --frnds-cream: #f4efe7;
+    --frnds-warm: #e9dfd2;
+    --frnds-gold: #c79b58;
+    --frnds-gold-light: #ddb77e;
+    --frnds-muted: #9d9590;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* Prevent iOS text-size adjust surprises */
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-frnds-black text-frnds-cream font-sans;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Selection — warm gold highlight */
+  ::selection {
+    background-color: var(--frnds-gold);
+    color: var(--frnds-black);
+  }
+
+  /* Scroll lock while the mobile menu is open */
+  body.nav-locked {
+    overflow: hidden;
+  }
+
+  /* Image defaults — responsive, no inline gaps */
+  img,
+  picture,
+  video {
+    @apply block max-w-full h-auto;
+  }
+
+  /* Keyboard focus — visible, on-brand */
+  :focus-visible {
+    outline: 2px solid var(--frnds-gold);
+    outline-offset: 3px;
+  }
+
+  /* Respect reduced-motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Reusable typography classes
+   Hierarchy: Cormorant Garamond = editorial, Italianno = decorative,
+   Inter = functional. Swap families in tailwind.config.js to rebrand.
+   -------------------------------------------------------------------------- */
+@layer components {
+  /* Hero H1 / large editorial display — Cormorant, weight 500, tight leading */
+  .type-display {
+    @apply font-display font-medium text-display-lg text-frnds-cream;
+  }
+
+  /* Section heading — Cormorant, weight 500 */
+  .type-heading {
+    @apply font-display font-medium text-heading-lg text-frnds-cream;
+  }
+
+  /* Decorative script accent — Italianno ONLY.
+     Use for event names, experience titles, editorial flourishes.
+     Never for paragraphs, nav, buttons, or functional UI. */
+  .type-script {
+    @apply font-script font-normal text-script text-frnds-gold;
+  }
+
+  /* Eyebrow / kicker — small caps label above headings */
+  .type-eyebrow {
+    @apply font-sans font-medium uppercase text-eyebrow tracking-[0.25em];
+  }
+
+  /* Body copy — Inter regular, comfortable leading */
+  .type-body {
+    @apply font-sans font-normal text-base md:text-lg leading-relaxed;
+  }
+
+  /* Navigation links — Inter medium, uppercase, letterspaced */
+  .type-nav {
+    @apply font-sans font-medium text-sm uppercase tracking-[0.15em];
+  }
+
+  /* Button label — Inter medium, uppercase, letterspaced */
+  .type-button {
+    @apply font-sans font-medium text-xs uppercase tracking-[0.2em];
+  }
+
+  /* Announcement bar supporting text — Inter only.
+     Pair with .type-script inline when a decorative event name is intended. */
+  .type-announcement {
+    @apply font-sans font-normal text-xs tracking-[0.1em];
+  }
+
+  /* ------------------------------------------------------------------
+     Buttons — minimal editorial style, no heavy radius/shadow
+     ------------------------------------------------------------------ */
+  .btn-primary {
+    @apply type-button inline-flex min-h-12 items-center justify-center gap-3
+           bg-frnds-gold text-frnds-black px-8 py-4
+           transition-colors duration-300 ease-out-expo
+           hover:bg-frnds-gold-light;
+  }
+
+  .btn-outline {
+    @apply type-button inline-flex min-h-12 items-center justify-center gap-3
+           border border-frnds-cream/40 text-frnds-cream px-8 py-4
+           transition-colors duration-300 ease-out-expo
+           hover:border-frnds-gold hover:text-frnds-gold;
+  }
+
+  /* Gold-outline CTA — editorial action on dark sections */
+  .btn-outline-gold {
+    @apply type-button inline-flex min-h-12 items-center justify-center gap-3
+           border border-frnds-gold/60 text-frnds-cream px-8 py-4
+           transition-colors duration-300 ease-out-expo
+           hover:border-frnds-gold hover:bg-frnds-gold hover:text-frnds-black;
+  }
+
+  /* Burgundy-outline CTA — editorial action on light/cream sections */
+  .btn-outline-burgundy {
+    @apply type-button inline-flex min-h-12 items-center justify-center gap-3
+           border border-frnds-burgundy/50 text-frnds-burgundy px-8 py-4
+           transition-colors duration-300 ease-out-expo
+           hover:border-frnds-burgundy hover:bg-frnds-burgundy hover:text-frnds-cream;
+  }
+
+  /* Burgundy CTA — primary action on light/cream sections */
+  .btn-burgundy {
+    @apply type-button inline-flex min-h-12 items-center justify-center gap-3
+           bg-frnds-burgundy text-frnds-cream px-8 py-4
+           transition-colors duration-300 ease-out-expo
+           hover:bg-frnds-burgundy-deep;
+  }
+
+  /* ------------------------------------------------------------------
+     Form fields — editorial underline style for dark sections
+     ------------------------------------------------------------------ */
+  .form-label {
+    @apply type-eyebrow mb-2 block text-frnds-cream/60;
+  }
+
+  .form-input {
+    @apply block w-full border-0 border-b border-frnds-cream/25 bg-transparent
+           px-0 py-3 font-sans text-base text-frnds-cream
+           transition-colors duration-300
+           placeholder:text-frnds-cream/35
+           focus:border-frnds-gold focus:outline-none focus:ring-0
+           [color-scheme:dark];
+  }
+
+  /* Map placeholder — stylized street grid, no live map embed */
+  .map-placeholder {
+    background-color: var(--color-frnds-warm, #e9dfd2);
+    background-image:
+      linear-gradient(rgba(58, 8, 13, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(58, 8, 13, 0.06) 1px, transparent 1px),
+      linear-gradient(rgba(58, 8, 13, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(58, 8, 13, 0.1) 1px, transparent 1px);
+    background-size:
+      28px 28px,
+      28px 28px,
+      140px 140px,
+      140px 140px;
+  }
+
+  /* Navbar Reserve — thin gold border, generous padding */
+  .btn-reserve {
+    @apply type-button inline-flex items-center justify-center
+           border border-frnds-gold/70 text-frnds-cream px-7 py-3
+           transition-colors duration-300 ease-out-expo
+           hover:bg-frnds-gold hover:text-frnds-black hover:border-frnds-gold;
+  }
+
+  /* ------------------------------------------------------------------
+     Announcement bar — thin burgundy strip, animates out on dismiss
+     ------------------------------------------------------------------ */
+  .announcement-bar {
+    @apply bg-frnds-burgundy border-b border-frnds-gold/15
+           overflow-hidden;
+    max-height: 4rem;
+    transition:
+      max-height 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+      opacity 0.35s ease,
+      transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .announcement-bar.is-dismissing {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-100%);
+    border-bottom-width: 0;
+  }
+
+  /* ------------------------------------------------------------------
+     Primary navbar — transparent over hero, solidifies on scroll
+     ------------------------------------------------------------------ */
+  .site-nav {
+    border-bottom: 1px solid transparent;
+    transition:
+      background-color 0.4s ease,
+      border-color 0.4s ease,
+      backdrop-filter 0.4s ease;
+  }
+
+  [data-scrolled] .site-nav {
+    background-color: rgb(13 5 6 / 0.82);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    border-bottom-color: rgb(244 239 231 / 0.08);
+  }
+
+  /* Desktop nav link — subtle gold underline on hover */
+  .nav-link {
+    @apply relative text-frnds-cream/85 transition-colors duration-300
+           hover:text-frnds-cream;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute left-0 -bottom-1.5 h-px w-full bg-frnds-gold
+           scale-x-0 origin-left transition-transform duration-300 ease-out-expo;
+  }
+
+  .nav-link:hover::after,
+  .nav-link:focus-visible::after {
+    @apply scale-x-100;
+  }
+
+  /* ------------------------------------------------------------------
+     Hamburger — two lines morphing into a close icon
+     ------------------------------------------------------------------ */
+  .nav-toggle-line {
+    @apply block h-px w-7 bg-frnds-cream transition-all duration-300 ease-out-expo;
+  }
+
+  .nav-toggle[aria-expanded='true'] .nav-toggle-line:first-child {
+    transform: translateY(3.5px) rotate(45deg);
+  }
+
+  .nav-toggle[aria-expanded='true'] .nav-toggle-line:last-child {
+    transform: translateY(-3.5px) rotate(-45deg);
+  }
+
+  /* ------------------------------------------------------------------
+     Mobile menu — full-screen burgundy overlay, fades/slides in
+     ------------------------------------------------------------------ */
+  .mobile-menu {
+    @apply fixed inset-0 z-40 flex flex-col bg-frnds-burgundy-deep
+           invisible opacity-0;
+    transition:
+      opacity 0.4s ease,
+      visibility 0s linear 0.4s;
+  }
+
+  .mobile-menu.is-open {
+    @apply visible opacity-100;
+    transition: opacity 0.4s ease;
+  }
+
+  .mobile-menu .mobile-nav-link {
+    transform: translateY(1.25rem);
+    opacity: 0;
+    transition:
+      opacity 0.5s ease,
+      transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .mobile-menu.is-open .mobile-nav-link {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .mobile-menu.is-open .mobile-nav-link:nth-child(1) { transition-delay: 0.08s; }
+  .mobile-menu.is-open .mobile-nav-link:nth-child(2) { transition-delay: 0.14s; }
+  .mobile-menu.is-open .mobile-nav-link:nth-child(3) { transition-delay: 0.2s; }
+  .mobile-menu.is-open .mobile-nav-link:nth-child(4) { transition-delay: 0.26s; }
+  .mobile-menu.is-open .mobile-nav-link:nth-child(5) { transition-delay: 0.32s; }
+
+  /* ------------------------------------------------------------------
+     Layout — primary content container
+     Consistent horizontal padding + max content width.
+     ------------------------------------------------------------------ */
+  .container-content {
+    @apply mx-auto w-full max-w-content px-5 sm:px-8 lg:px-12;
+  }
+
+  /* Thin editorial divider */
+  .divider-hairline {
+    @apply border-t border-frnds-cream/10;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Utilities Tailwind doesn't cover cleanly
+   -------------------------------------------------------------------------- */
+@layer utilities {
+  /* Reveal-on-scroll initial state — toggled by JS (data-reveal) */
+  .reveal-hidden {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+
+  .reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+      opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+}
