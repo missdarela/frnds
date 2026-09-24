@@ -1163,14 +1163,16 @@
 
               <!-- Storefront + map placeholder -->
               <div class="mt-12 grid grid-cols-2 gap-4">
-                <div
-                  role="img"
-                  aria-label="Map placeholder showing FRNDS located at Dubai Mall, Downtown Dubai"
-                  class="map-placeholder relative aspect-[5/4] overflow-hidden border border-frnds-burgundy/10"
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=FRNDS+Grand+Cafe+Dubai+Mall"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open FRNDS Dubai Mall location in Google Maps"
+                  class="map-placeholder group relative block aspect-[5/4] overflow-hidden border border-frnds-burgundy/10 transition-colors duration-300 hover:border-frnds-gold/60 focus-visible:border-frnds-gold"
                 >
                   <span
                     aria-hidden="true"
-                    class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-frnds-burgundy"
+                    class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-frnds-burgundy transition-transform duration-300 group-hover:-translate-y-[60%]"
                   >
                     <svg
                       class="h-7 w-7"
@@ -1183,10 +1185,10 @@
                     </svg>
                   </span>
                   <span
-                    class="absolute bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap text-[0.625rem] uppercase tracking-[0.3em] text-frnds-burgundy/60"
+                    class="absolute bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap text-[0.625rem] uppercase tracking-[0.3em] text-frnds-burgundy/60 transition-colors duration-300 group-hover:text-frnds-burgundy"
                     >Dubai Mall</span
                   >
-                </div>
+                </a>
                 <figure
                   class="overflow-hidden border border-frnds-burgundy/10"
                   data-reveal
